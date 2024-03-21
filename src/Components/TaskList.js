@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Task from './Task';
-
+import Task from './Task/Task.js';
+import './taskList.css'
 
 
 export default function TaskList(){
@@ -13,10 +13,10 @@ export default function TaskList(){
 
     function handleClick(){
         setListOfTasks(prev => {
-            if (!prev.includes(task)){
-                return [...prev, task];
-            } else {
+            if (prev.includes(task)){
                 return [...prev];
+            } else {
+                return [...prev, task];
             }
         })
         setTask("");
@@ -25,22 +25,26 @@ export default function TaskList(){
 
     function handleDeletion(content){
         setListOfTasks(prev => {
-            return prev.filter(task => {
-                return task !== content;
-            })
+            return prev.filter(task => task !== content);
         })
     }
 
     return (
-        <>
-            <input name="inputTask" id="inputTask" placeholder="Type your task" onChange={handleChange} value={task}/>
-            <button name="addTask" id="addTask" disabled={!task} onClick={handleClick}>Add</button>
+        <div className='TaskList'>
+
+            <div className='AddTask'>
+                <input name="inputTask" id="inputTask" placeholder="Type in your task" onChange={handleChange} value={task}/>
+                <button id="addTaskButton" disabled={!task} onClick={handleClick}>Add</button>
+            </div>
 
             <ul>
                 {listOfTasks.map((content, index) => {
-                    return <Task content={content} key={index} handleDeletion={() => handleDeletion(content)} />
+                    return <Task content={content} num={index + 1} key={index} handleDeletion={() => handleDeletion(content)} />
                 })}
             </ul>
-        </>
+            <div className='Footer'>
+                <p>React is hard</p>
+            </div>
+        </div>
     )
 }

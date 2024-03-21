@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.TaskList {
+    max-width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.AddTask {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background-color: rgb(121, 121, 121);
+    border-radius: 15px 15px 0 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer {
+    display: flex;
+    background-color: rgb(121, 121, 121);
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    text-align: center;
+    border-top: 3px solid white;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer p {
+    text-transform: uppercase;
+    color: white;
+}
+

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.Task {
+    flex-grow: 1;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    background-color: lightgrey;
+    width: 100%;
+    padding: 5px;
+    border: 3px solid white;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.Num {
+    position: relative;
+    left: 7px;
+    align-self: center;
+    font-size: 1.2em;
+    border-radius: 100%;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid darkgrey;
+}
+
+.Content {
+    max-width: 50%;
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid black;
+    word-wrap: break-word;
+    background-color: white;
+    padding-top: 5px;
+}
+
+.DeleteButton {
+    position: relative;
+    right: 1%;
+    height: 30px;
+    width: 30px;
+    justify-self: center;
+    align-self: center;
+}
