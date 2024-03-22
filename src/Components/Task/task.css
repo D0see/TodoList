@@ -13,7 +13,7 @@
     background-color: lightgrey;
     width: 100%;
     padding: 5px;
-    border: 3px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.993);
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
@@ -59,17 +59,24 @@
     width: 20px;
     height: 20px;
     border: 2px solid rgb(112, 112, 112);
-    border-radius: 100%;
+    border-radius: 4px;
     outline: none;
     cursor: pointer;
     position: relative;
     top: 5px;
     left: -7%;
+    text-align: center;
+    font-weight: 600;
+    color: white;
 }
 
 .Checkbox:checked {
     background-color: rgb(207, 42, 42);
-    content: v;
+}
+
+.Checkbox:checked:after {
+    content: '✓';
+
 }
 
 .DeleteButton:hover {

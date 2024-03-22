@@ -26,21 +26,26 @@ export default function TaskList(){
     }
 
     return (
-        <div className='TaskList'>
-
-            <div className='AddTask'>
-                <input name="inputTask" className="InputTask" placeholder="Type in your task" onChange={handleChange} value={task}/>
-                <button className="AddTaskButton" disabled={!task} onClick={handleClick}>Add</button>
+        <>
+            <div className='Background'>
+                {listOfTasks.map((task, i) => <p>{`${i+1}. ${task}`}</p> )}
             </div>
+            <div className='TaskList'>
 
-            <ul>
-                {listOfTasks.map((content, index) => {
-                    return <Task content={content} num={index + 1} key={index} handleDeletion={() => handleDeletion(index)}/>
-                })}
-            </ul>
-            <div className='Footer'>
-                <p>React is hard</p>
+                <div className='AddTask'>
+                    <input name="inputTask" className="InputTask" placeholder="Type in your task" onChange={handleChange} value={task}/>
+                    <button className="AddTaskButton" disabled={!task} onClick={handleClick}>Add</button>
+                </div>
+
+                <ul>
+                    {listOfTasks.map((content, index) => {
+                        return <Task content={content} num={index + 1} key={index} handleDeletion={() => handleDeletion(index)}/>
+                    })}
+                </ul>
+                <div className='Footer'>
+                    <p>React is hard</p>
+                </div>
             </div>
-        </div>
+        </>
     )
 }

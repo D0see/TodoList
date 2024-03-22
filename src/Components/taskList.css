@@ -3,12 +3,28 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.Background {
+    position: absolute;
+    min-width: calc(100% - 40px);
+    max-height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    font-size: 12vh;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(184, 184, 184, 0.274);
+    overflow: hidden;
+    word-wrap: break-word;
+    padding: 0 20px;
+    filter: blur(2px)
+}
 .TaskList {
     max-width: 50%;
     min-width: 300px;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 7%;
+    margin-bottom: 7%;
 }
 
 .InputTask {
