@@ -32,7 +32,7 @@
 }
 
 .Content {
-    max-width: 50%;
+    max-width: 75%;
     flex-grow: 1;
     text-align: center;
     border: 1px solid black;
@@ -48,4 +48,6 @@
     width: 30px;
     justify-self: center;
     align-self: center;
+    background-color: rgb(207, 42, 42);
+    color: white;
 }

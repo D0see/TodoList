@@ -33,8 +33,8 @@ export default function TaskList(){
         <div className='TaskList'>
 
             <div className='AddTask'>
-                <input name="inputTask" id="inputTask" placeholder="Type in your task" onChange={handleChange} value={task}/>
-                <button id="addTaskButton" disabled={!task} onClick={handleClick}>Add</button>
+                <input name="inputTask" className="InputTask" placeholder="Type in your task" onChange={handleChange} value={task}/>
+                <button className="AddTaskButton" disabled={!task} onClick={handleClick}>Add</button>
             </div>
 
             <ul>
