@@ -13,19 +13,15 @@ export default function TaskList(){
 
     function handleClick(){
         setListOfTasks(prev => {
-            if (prev.includes(task)){
-                return [...prev];
-            } else {
                 return [...prev, task];
             }
-        })
+        )
         setTask("");
-        console.log(listOfTasks); // Testing purposes
     }
 
-    function handleDeletion(content){
+    function handleDeletion(index){
         setListOfTasks(prev => {
-            return prev.filter(task => task !== content);
+            return prev.filter((task, i)=> i !== index);
         })
     }
 
@@ -39,7 +35,7 @@ export default function TaskList(){
 
             <ul>
                 {listOfTasks.map((content, index) => {
-                    return <Task content={content} num={index + 1} key={index} handleDeletion={() => handleDeletion(content)} />
+                    return <Task content={content} num={index + 1} key={index} handleDeletion={() => handleDeletion(index)}/>
                 })}
             </ul>
             <div className='Footer'>

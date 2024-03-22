@@ -15,6 +15,7 @@
     width: 50%;
     border: 1px solid black;
     padding: 5px;
+    outline: 2px solid rgb(207, 42, 42);
 }
 
 .AddTask {
@@ -56,4 +57,3 @@ ul {
     text-transform: uppercase;
     color: white;
 }
-

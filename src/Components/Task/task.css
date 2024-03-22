@@ -5,6 +5,7 @@
 }
 
 .Task {
+    position: relative;
     flex-grow: 1;
     justify-content: space-between;
     display: flex;
@@ -16,6 +17,8 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .Num {
@@ -32,13 +35,45 @@
 }
 
 .Content {
-    max-width: 75%;
+    position: relative;
+    left: 5%;
+    max-width: 65%;
+    padding: 0 10%;
     flex-grow: 1;
     text-align: center;
     border: 1px solid black;
     word-wrap: break-word;
     background-color: white;
     padding-top: 5px;
+}
+
+.Crossed {
+    text-decoration: line-through;
+    color: rgb(112, 112, 112);
+}
+
+.Checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 100%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    left: -7%;
+}
+
+.Checkbox:checked {
+    background-color: rgb(207, 42, 42);
+    content: v;
+}
+
+.DeleteButton:hover {
+    border: 2px solid white;
 }
 
 .DeleteButton {
@@ -50,4 +85,11 @@
     align-self: center;
     background-color: rgb(207, 42, 42);
     color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.Fade-out {
+    opacity: 0;
+    
 }
